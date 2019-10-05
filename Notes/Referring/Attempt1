@@ -1,0 +1,779 @@
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+a66121f (HEAD -> master) HEAD@{0}: reset: moving to a66121f
+e3d8ee1 HEAD@{1}: commit: Note1.md-2019-10-5
+a66121f (HEAD -> master) HEAD@{2}: reset: moving to a6612
+dff3823 HEAD@{3}: reset: moving to HEAD^
+a66121f (HEAD -> master) HEAD@{4}: reset: moving to a6612
+dff3823 HEAD@{5}: reset: moving to HEAD^
+a66121f (HEAD -> master) HEAD@{6}: commit: add something
+dff3823 HEAD@{7}: commit: haha
+4e7b21e HEAD@{8}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reset a66121f
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflof
+git: 'reflof' is not a git command. See 'git --help'.
+
+The most similar command is
+        reflog
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+a66121f (HEAD -> master) HEAD@{0}: reset: moving to a66121f
+a66121f (HEAD -> master) HEAD@{1}: reset: moving to a66121f
+e3d8ee1 HEAD@{2}: commit: Note1.md-2019-10-5
+a66121f (HEAD -> master) HEAD@{3}: reset: moving to a6612
+dff3823 HEAD@{4}: reset: moving to HEAD^
+a66121f (HEAD -> master) HEAD@{5}: reset: moving to a6612
+dff3823 HEAD@{6}: reset: moving to HEAD^
+a66121f (HEAD -> master) HEAD@{7}: commit: add something
+dff3823 HEAD@{8}: commit: haha
+4e7b21e HEAD@{9}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reset e3d8ee1
+Unstaged changes after reset:
+D       Notes/Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+e3d8ee1 (HEAD -> master) HEAD@{0}: reset: moving to e3d8ee1
+a66121f HEAD@{1}: reset: moving to a66121f
+a66121f HEAD@{2}: reset: moving to a66121f
+e3d8ee1 (HEAD -> master) HEAD@{3}: commit: Note1.md-2019-10-5
+a66121f HEAD@{4}: reset: moving to a6612
+dff3823 HEAD@{5}: reset: moving to HEAD^
+a66121f HEAD@{6}: reset: moving to a6612
+dff3823 HEAD@{7}: reset: moving to HEAD^
+a66121f HEAD@{8}: commit: add something
+dff3823 HEAD@{9}: commit: haha
+4e7b21e HEAD@{10}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+e3d8ee1 (HEAD -> master) HEAD@{0}: reset: moving to e3d8ee1
+a66121f HEAD@{1}: reset: moving to a66121f
+a66121f HEAD@{2}: reset: moving to a66121f
+e3d8ee1 (HEAD -> master) HEAD@{3}: commit: Note1.md-2019-10-5
+a66121f HEAD@{4}: reset: moving to a6612
+dff3823 HEAD@{5}: reset: moving to HEAD^
+a66121f HEAD@{6}: reset: moving to a6612
+dff3823 HEAD@{7}: reset: moving to HEAD^
+a66121f HEAD@{8}: commit: add something
+dff3823 HEAD@{9}: commit: haha
+4e7b21e HEAD@{10}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git add Notes/Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git commit -m "Move Note1 to a new place"
+On branch master
+Changes not staged for commit:
+        deleted:    repository/test/Note1.md
+
+Untracked files:
+        .vscode/
+        Butler/
+
+no changes added to commit
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+e3d8ee1 (HEAD -> master) HEAD@{0}: reset: moving to e3d8ee1
+a66121f HEAD@{1}: reset: moving to a66121f
+a66121f HEAD@{2}: reset: moving to a66121f
+e3d8ee1 (HEAD -> master) HEAD@{3}: commit: Note1.md-2019-10-5
+a66121f HEAD@{4}: reset: moving to a6612
+dff3823 HEAD@{5}: reset: moving to HEAD^
+a66121f HEAD@{6}: reset: moving to a6612
+dff3823 HEAD@{7}: reset: moving to HEAD^
+a66121f HEAD@{8}: commit: add something
+dff3823 HEAD@{9}: commit: haha
+4e7b21e HEAD@{10}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    readme.txt
+        deleted:    repository/test/Note1.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+        Butler/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git add Notes/Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git add Butler/
+warning: LF will be replaced by CRLF in Butler/AndroidManifest.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/bin/AndroidManifest.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/bin/jarlist.cache.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/gen/com/des/butler/BuildConfig.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/proguard-project.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/project.properties.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/layout/daily_list.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/values-v11/styles.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/values-v14/styles.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/values-w820dp/dimens.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/values/strings.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/res/values/styles.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Butler/src/com/des/butler/MainActivity.java.
+The file will have its original line endings in your working directory
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ^C
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git commit -m “Update”
+[master b8c0333] “Update”
+ 122 files changed, 3874 insertions(+)
+ create mode 100644 Butler/.classpath
+ create mode 100644 Butler/.project
+ create mode 100644 Butler/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 Butler/AndroidManifest.xml
+ create mode 100644 Butler/bin/AndroidManifest.xml
+ create mode 100644 Butler/bin/Butler.apk
+ create mode 100644 Butler/bin/classes.dex
+ create mode 100644 Butler/bin/classes/com/des/butler/BuildConfig.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Calendar$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Calendar$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Calendar.class
+ create mode 100644 Butler/bin/classes/com/des/butler/DailyList$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/DailyList$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/DailyList$3.class
+ create mode 100644 Butler/bin/classes/com/des/butler/DailyList$4.class
+ create mode 100644 Butler/bin/classes/com/des/butler/DailyList.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$10.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$11.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$3.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$4.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$5.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$6.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$7.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$8.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit$9.class
+ create mode 100644 Butler/bin/classes/com/des/butler/ItemEdit.class
+ create mode 100644 Butler/bin/classes/com/des/butler/LogIn$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/LogIn$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/LogIn$3.class
+ create mode 100644 Butler/bin/classes/com/des/butler/LogIn.class
+ create mode 100644 Butler/bin/classes/com/des/butler/MainActivity$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/MainActivity$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/MainActivity.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Picture$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Picture.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$attr.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$dimen.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$drawable.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$id.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$layout.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$menu.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$string.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R$style.class
+ create mode 100644 Butler/bin/classes/com/des/butler/R.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Settings$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Settings$2.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Settings$3.class
+ create mode 100644 Butler/bin/classes/com/des/butler/Settings.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/ActivityCollector.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/ButlerActivity.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/ButlerDataBase.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/ImageUtils.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/MClickableSpan.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/RealPathFromUriUtils.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/ScreenUtils.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/SwZoomDragImageView$1.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/SwZoomDragImageView.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/TDPitem.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/TdpAdapter$MyClickListener.class
+ create mode 100644 Butler/bin/classes/com/des/butler/tools/TdpAdapter.class
+ create mode 100644 Butler/bin/dexedLibs/android-support-v4-03188232c292a7889257dc6a794adba5.jar
+ create mode 100644 Butler/bin/dexedLibs/android-support-v4-15774f44ca02921cd94c63bfb2ecdc7c.jar
+ create mode 100644 Butler/bin/dexedLibs/android-support-v4-42e34fd1d4cdc1eb55497a24a48b5199.jar
+ create mode 100644 Butler/bin/jarlist.cache
+ create mode 100644 Butler/bin/res/crunch/drawable-hdpi/add.png
+ create mode 100644 Butler/bin/res/crunch/drawable-hdpi/bar.PNG
+ create mode 100644 Butler/bin/res/crunch/drawable-hdpi/ic_launcher.png
+ create mode 100644 Butler/bin/res/crunch/drawable-hdpi/login_background.png
+ create mode 100644 Butler/bin/res/crunch/drawable-hdpi/none.PNG
+ create mode 100644 Butler/bin/res/crunch/drawable-mdpi/ic_launcher.png
+ create mode 100644 Butler/bin/res/crunch/drawable-xhdpi/ic_launcher.png
+ create mode 100644 Butler/bin/res/crunch/drawable-xxhdpi/ic_launcher.png
+ create mode 100644 Butler/bin/resources.ap_
+ create mode 100644 Butler/gen/com/des/butler/BuildConfig.java
+ create mode 100644 Butler/gen/com/des/butler/R.java
+ create mode 100644 Butler/ic_launcher-web.png
+ create mode 100644 Butler/libs/android-support-v4.jar
+ create mode 100644 Butler/proguard-project.txt
+ create mode 100644 Butler/project.properties
+ create mode 100644 Butler/res/drawable-hdpi/add.png
+ create mode 100644 Butler/res/drawable-hdpi/bar.PNG
+ create mode 100644 Butler/res/drawable-hdpi/ic_launcher.png
+ create mode 100644 Butler/res/drawable-hdpi/login_background.png
+ create mode 100644 Butler/res/drawable-hdpi/none.PNG
+ create mode 100644 Butler/res/drawable-mdpi/ic_launcher.png
+ create mode 100644 Butler/res/drawable-xhdpi/ic_launcher.png
+ create mode 100644 Butler/res/drawable-xxhdpi/ic_launcher.png
+ create mode 100644 Butler/res/layout/activity_main.xml
+ create mode 100644 Butler/res/layout/calendar.xml
+ create mode 100644 Butler/res/layout/daily_list.xml
+ create mode 100644 Butler/res/layout/item_edit.xml
+ create mode 100644 Butler/res/layout/log_in.xml
+ create mode 100644 Butler/res/layout/picture.xml
+ create mode 100644 Butler/res/layout/settings.xml
+ create mode 100644 Butler/res/layout/tdp_item.xml
+ create mode 100644 Butler/res/menu/daily_list_menu.xml
+ create mode 100644 Butler/res/menu/main.xml
+ create mode 100644 Butler/res/values-v11/styles.xml
+ create mode 100644 Butler/res/values-v14/styles.xml
+ create mode 100644 Butler/res/values-w820dp/dimens.xml
+ create mode 100644 Butler/res/values/dimens.xml
+ create mode 100644 Butler/res/values/strings.xml
+ create mode 100644 Butler/res/values/styles.xml
+ create mode 100644 Butler/src/com/des/butler/Calendar.java
+ create mode 100644 Butler/src/com/des/butler/DailyList.java
+ create mode 100644 Butler/src/com/des/butler/ItemEdit.java
+ create mode 100644 Butler/src/com/des/butler/LogIn.java
+ create mode 100644 Butler/src/com/des/butler/MainActivity.java
+ create mode 100644 Butler/src/com/des/butler/Picture.java
+ create mode 100644 Butler/src/com/des/butler/Settings.java
+ create mode 100644 Butler/src/com/des/butler/tools/ActivityCollector.java
+ create mode 100644 Butler/src/com/des/butler/tools/ButlerActivity.java
+ create mode 100644 Butler/src/com/des/butler/tools/ButlerDataBase.java
+ create mode 100644 Butler/src/com/des/butler/tools/ImageUtils.java
+ create mode 100644 Butler/src/com/des/butler/tools/MClickableSpan.java
+ create mode 100644 Butler/src/com/des/butler/tools/RealPathFromUriUtils.java
+ create mode 100644 Butler/src/com/des/butler/tools/ScreenUtils.java
+ create mode 100644 Butler/src/com/des/butler/tools/SwZoomDragImageView.java
+ create mode 100644 Butler/src/com/des/butler/tools/TDPitem.java
+ create mode 100644 Butler/src/com/des/butler/tools/TdpAdapter.java
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git reflog
+b8c0333 (HEAD -> master) HEAD@{0}: commit: “Update”
+e3d8ee1 HEAD@{1}: reset: moving to e3d8ee1
+a66121f HEAD@{2}: reset: moving to a66121f
+a66121f HEAD@{3}: reset: moving to a66121f
+e3d8ee1 HEAD@{4}: commit: Note1.md-2019-10-5
+a66121f HEAD@{5}: reset: moving to a6612
+dff3823 HEAD@{6}: reset: moving to HEAD^
+a66121f HEAD@{7}: reset: moving to a6612
+dff3823 HEAD@{8}: reset: moving to HEAD^
+a66121f HEAD@{9}: commit: add something
+dff3823 HEAD@{10}: commit: haha
+4e7b21e HEAD@{11}: commit (initial): Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    readme.txt
+        modified:   repository/test/Note1.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git rm readme.txt
+rm 'readme.txt'
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git rm repofitory
+fatal: pathspec 'repofitory' did not match any files
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git rm repository/test/Note1.md
+error: the following file has local modifications:
+    repository/test/Note1.md
+(use --cached to keep the file, or -f to force removal)
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git commit -m "delete readme"
+[master 3284893] delete readme
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 readme.txt
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git mv repository/test/Not1.md Notes/Note1.md
+fatal: bad source, source=repository/test/Not1.md, destination=Notes/Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git rm repository/test/Not1.md
+fatal: pathspec 'repository/test/Not1.md' did not match any files
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   repository/test/Note1.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    repository/test/Note1.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git rm repository/test/Note1.md
+rm 'repository/test/Note1.md'
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git commit -m "delete repository"
+[master 30e6477] delete repository
+ 1 file changed, 93 deletions(-)
+ delete mode 100644 repository/test/Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git add .vscode/
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git commit -m "track .vscode/"
+[master ee4e9e0] track .vscode/
+ 1 file changed, 14 insertions(+)
+ create mode 100644 .vscode/launch.json
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add E_W_origin git@github.com:Deslate/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u E_W_origin master
+Connection reset by 13.229.188.59 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add git@github.com:DeslateYang/E-Workspace.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:DeslateYang/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+The authenticity of host 'github.com (13.229.188.59)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+The authenticity of host 'github.com (140.82.118.4)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.118.4' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ remote add origin git@github.com:DeslateYang/E-Workspace.git
+bash: remote: command not found
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:DeslateYang/E-Workspace.git
+fatal: remote origin already exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:DeslateYang/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '140.82.118.3' to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote -v
+E_W_origin      git@github.com:Deslate/E-Workspace.git (fetch)
+E_W_origin      git@github.com:Deslate/E-Workspace.git (push)
+origin  git@github.com:DeslateYang/E-Workspace.git (fetch)
+origin  git@github.com:DeslateYang/E-Workspace.git (push)
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm E_W_origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin https://github.com/DeslateYang/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/DeslateYang/E-Workspace.git/'
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+Enumerating objects: 180, done.
+Counting objects: 100% (180/180), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (155/155), done.
+Writing objects:  10% (18/180)
+Writing objects: 100% (180/180), 4.69 MiB | 39.00 KiB/s, done.
+Total 180 (delta 20), reused 0 (delta 0)
+remote: Resolving deltas: 100% (20/20), done.
+To https://github.com/DeslateYang/E-Workspace.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push origin master
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Username for 'https://github.com':
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/DeslateYang/E-Workspace.git/'
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:DeslateYang/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git config --global user.name "DeslateYang"
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git log
+commit ee4e9e03d3b359d516980bff3ad2c64c29f89cf5 (HEAD -> master)
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 15:24:09 2019 +0800
+
+    track .vscode/
+
+commit 30e6477fdf17f71aeda54dbcc333baf5cf122cc0
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 15:22:38 2019 +0800
+
+    delete repository
+
+commit 32848933745ca57ed6fd5162b5f0106dae97646d
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 15:13:43 2019 +0800
+
+    delete readme
+
+commit b8c03335b6065c3ff5ad8bcbadca493aac640d00
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 14:53:01 2019 +0800
+
+    “Update”
+
+commit e3d8ee14c4d11a912d7cc8b3016af4e0c762a33e
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 11:53:10 2019 +0800
+
+    Note1.md-2019-10-5
+
+commit a66121f1ad82860fb4e0af6d798f83b4c090ae32
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 11:27:42 2019 +0800
+
+    add something
+
+commit dff3823be3c95dafd857b226ffed0844b1ec7e2e
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 11:26:27 2019 +0800
+
+    haha
+
+commit 4e7b21eb8d8ba3058a530af39675f525cadce5d7
+Author: Deslate <deslate@outlook.com>
+Date:   Sat Oct 5 11:13:54 2019 +0800
+
+    Update Note1.md
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git config --global user.name "Deslate"
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-keygen -t rsa -C “desssh-keygen -t rsa -C “des
+bash: $: command not found
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-keygen -t rsa -C “des
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Lenovo/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Lenovo/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Lenovo/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Zo90MMAbb8ONHz/7h4MGD6NKg5s4XI+I0V7OsSr7Jo8 “des
+The key's randomart image is:
++---[RSA 3072]----+
+|     ..          |
+|      o.         |
+|       =oo       |
+|      . *oo      |
+| .     .So.o     |
+|. . +. + += o    |
+| = *.=o ...= + . |
+|+.*.=+...   = o .|
+|EB=oo ..   . ..o |
++----[SHA256]-----+
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-keygen -t rsa -b 4096 -C "deslate@outlook.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Lenovo/.ssh/id_rsa): /e
+/e already exists.
+Overwrite (y/n)? n
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-keygen -t rsa -b 4096 -C "deslate@outlook.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Lenovo/.ssh/id_rsa):
+/c/Users/Lenovo/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Lenovo/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Lenovo/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:nltsTXyZc8fecDNfHsWaEwfZcph8qqweX13EOgKXMKw deslate@outlook.com
+The key's randomart image is:
++---[RSA 4096]----+
+|         .o  ..= |
+|          .o .*++|
+|         .. o .=*|
+|        E  +  .@.|
+|        S  .+.%+B|
+|       . o ooo @X|
+|        o =.. . *|
+|         +.o .   |
+|        ... .    |
++----[SHA256]-----+
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-add ~/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ pbcopy < ~/.ssh/id_rsa.pub
+bash: pbcopy: command not found
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-add ~/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ ssh-add ~/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git -push origin master
+unknown option: -push
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push origin master
+Connection reset by 13.250.177.223 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -git push -
+error: unknown switch `g'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:Deslate/E-Workspace
+fatal: remote origin already exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote -v
+origin  git@github.com:DeslateYang/E-Workspace.git (fetch)
+origin  git@github.com:DeslateYang/E-Workspace.git (push)
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:Deslate/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push origin master
+Connection reset by 13.250.177.223 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+Connection reset by 52.74.223.119 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote rm origin
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git remote add origin git@github.com:Deslate/E-Workspace.git
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$ git push -u origin master
+Connection reset by 52.74.223.119 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@Lenovo-PC MINGW64 /e (master)
+$
