@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.des.butler"
+    android:versionCode="1"
+    android:versionName="1.3.3" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Calendar"
+            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.CALENDAR" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DailyList"
+            android:launchMode="singleTask"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.DAYLIST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemEdit"
+            android:launchMode="singleTask"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.ITEMEDIT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Picture"
+            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.PICTURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Settings"
+            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.SETTINGS" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LogIn"
+            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.des.butler.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.des.butler.LOGIN" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

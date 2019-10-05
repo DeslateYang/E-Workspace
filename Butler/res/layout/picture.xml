@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#A6000000">
+    
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/back_butt_in_pic"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dip"
+        android:layout_height="40dip"
+        android:background="#FAF4FF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="返回"/>
+
+</RelativeLayout>

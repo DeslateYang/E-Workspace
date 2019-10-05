@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip" 
+        android:background="#84C1FF">
+
+        <Button
+            android:id="@+id/back_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#84C1FF"
+            android:textColor="#FAF4FF"
+            android:text="返回" />
+
+        <Button
+            android:id="@+id/save_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#84C1FF"
+            android:textColor="#FAF4FF"
+            android:text="保存" />
+
+        <TextView
+            android:id="@+id/item_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/back_butt"
+            android:gravity="center"
+            android:textColor="#FAF4FF"
+            android:text="事项"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:scrollbars="vertical" >
+        
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/choose_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#84C1FF"
+            android:text="输入时间："
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/hour_get"
+            android:layout_width="50dip"
+            android:textColor="#84C1FF"
+            android:layout_height="wrap_content" />
+
+        
+        <TextView
+            android:id="@+id/hour_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#84C1FF"
+            android:text="时"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/minute_get"
+            android:textColor="#84C1FF"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/minute_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#84C1FF"
+            android:text="分"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/time_set_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#84C1FF"
+            android:textColor="#FAF4FF"
+            android:text="设为现在" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dip" >
+
+        <Button
+            android:id="@+id/add_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#84C1FF"
+            android:textColor="#FAF4FF"
+            android:text="图" />
+
+        <Button
+            android:id="@+id/take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#84C1FF"
+            android:textColor="#FAF4FF"
+            android:text="照" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/detail_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+                
+            </LinearLayout>
+        </ScrollView>
+        
+        
+
+    </LinearLayout>
+    
+
+    
+
+</LinearLayout>
